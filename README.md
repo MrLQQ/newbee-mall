@@ -40,4 +40,4 @@
 * Interceptor：拦截器的具体实现，完成身份验证、购物车数量实时更新；
 * controller：MVC框架中的控制器，根据web端的请求调用相应的service层进行逻辑处理；
 * entity：项目中的常用字段类；
-* service：服务层，由控制器进行调用；s
+* service：服务层，由控制器进行调用；
