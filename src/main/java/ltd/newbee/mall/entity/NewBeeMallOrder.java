@@ -34,6 +34,10 @@ public class NewBeeMallOrder {
 
     private String extraInfo;   // 订单body
 
+    private String userName;    // 收货人姓名
+
+    private String userPhone;   // 收货人手机号
+
     private String userAddress; // 收货人地址
 
     private Byte isDeleted;     // 删除标识字段（0-未删除 1-已删除）
@@ -42,6 +46,22 @@ public class NewBeeMallOrder {
     private Date createTime;    // 创建时间
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date updateTime;    // 最新修改时间
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserPhone() {
+        return userPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
+    }
 
     public Long getOrderId() {
         return orderId;
@@ -162,6 +182,8 @@ public class NewBeeMallOrder {
         sb.append(", payTime=").append(payTime);
         sb.append(", orderStatus=").append(orderStatus);
         sb.append(", extraInfo=").append(extraInfo);
+        sb.append(", userName=").append(userName);
+        sb.append(", userPhone=").append(userPhone);
         sb.append(", userAddress=").append(userAddress);
         sb.append(", isDeleted=").append(isDeleted);
         sb.append(", createTime=").append(createTime);
@@ -169,4 +191,5 @@ public class NewBeeMallOrder {
         sb.append("]");
         return sb.toString();
     }
+
 }
