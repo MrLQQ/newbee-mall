@@ -13,8 +13,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author 13
- * @link https://github.com/newbee-ltd
+ * @author LQQ
  */
 @MapperScan("ltd.newbee.mall.dao")
 @SpringBootApplication

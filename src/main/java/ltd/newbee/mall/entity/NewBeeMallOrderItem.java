@@ -10,22 +10,25 @@ package ltd.newbee.mall.entity;
 
 import java.util.Date;
 
+/**
+ * 订单快照表（订单和商品关联表）
+ */
 public class NewBeeMallOrderItem {
-    private Long orderItemId;
+    private Long orderItemId;       // 订单关联购物项主键id
 
-    private Long orderId;
+    private Long orderId;           // 订单主键id
 
-    private Long goodsId;
+    private Long goodsId;           // 关联商品id
 
-    private String goodsName;
+    private String goodsName;       // 下单时商品的名称（订单快照）
 
-    private String goodsCoverImg;
+    private String goodsCoverImg;   // 下单时商品的主图（订单快照）
 
-    private Integer sellingPrice;
+    private Integer sellingPrice;   // 下单时商品的价格（订单快照）
 
-    private Integer goodsCount;
+    private Integer goodsCount;     // 数量（订单快照）
 
-    private Date createTime;
+    private Date createTime;        // 创建时间
 
     public Long getOrderItemId() {
         return orderItemId;

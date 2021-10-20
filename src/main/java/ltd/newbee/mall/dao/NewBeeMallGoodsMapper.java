@@ -36,6 +36,11 @@ public interface NewBeeMallGoodsMapper {
 
     int getTotalNewBeeMallGoods(PageQueryUtil pageUtil);
 
+    /**
+     * 根据多个goodsId集合查询多个商品信息
+     * @param goodsIds 多个goodId的列表
+     * @return 返回指定goodsId的商品信息列表
+     */
     List<NewBeeMallGoods> selectByPrimaryKeys(List<Long> goodsIds);
 
     List<NewBeeMallGoods> findNewBeeMallGoodsListBySearch(PageQueryUtil pageUtil);

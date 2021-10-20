@@ -43,6 +43,7 @@ public class GoodsController {
         }
         params.put("limit", Constants.GOODS_SEARCH_PAGE_LIMIT);
         //封装分类数据
+        // containsKey方法检查 hashMap 中是否存在指定的 key 对应的映射关系。
         if (params.containsKey("goodsCategoryId") && !StringUtils.isEmpty(params.get("goodsCategoryId") + "")) {
             Long categoryId = Long.valueOf(params.get("goodsCategoryId") + "");
             SearchPageCategoryVO searchPageCategoryVO = newBeeMallCategoryService.getCategoriesForSearch(categoryId);

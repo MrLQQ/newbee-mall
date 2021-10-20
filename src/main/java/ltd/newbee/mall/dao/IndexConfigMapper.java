@@ -35,5 +35,11 @@ public interface IndexConfigMapper {
 
     int deleteBatch(Long[] ids);
 
+    /**
+     * 根据类型和数量查找首页显示商品的配置信息
+     * @param configType <br>1-搜索框热搜<br> 2-搜索下拉框热搜<br> 3-(首页)热销商品<br> 4-(首页)新品上线<br> 5-(首页)为你推荐<br>
+     * @param number 要查找的数量
+     * @return 符合查询条件的IndexConfig List
+     */
     List<IndexConfig> findIndexConfigsByTypeAndNum(@Param("configType") int configType, @Param("number") int number);
 }

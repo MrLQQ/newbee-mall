@@ -12,25 +12,28 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
+/**
+ * 用户表
+ */
 public class MallUser {
-    private Long userId;
+    private Long userId;            // 用户主键id
 
-    private String nickName;
+    private String nickName;        // 用户昵称
 
-    private String loginName;
+    private String loginName;       // 登录名称（默认为手机号）
 
-    private String passwordMd5;
+    private String passwordMd5;     // MD5加密后的密码
 
-    private String introduceSign;
+    private String introduceSign;   // 个性签名
 
-    private String address;
+    private String address;         // 收货地址
 
-    private Byte isDeleted;
+    private Byte isDeleted;         // 注销标识字段（0-正常 1-已注销）
 
-    private Byte lockedFlag;
+    private Byte lockedFlag;        // 锁定标识字段（0-未锁定 1-已锁定）
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date createTime;
+    private Date createTime;        // 注册时间
 
     public Long getUserId() {
         return userId;

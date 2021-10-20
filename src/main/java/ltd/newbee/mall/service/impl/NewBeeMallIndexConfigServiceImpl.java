@@ -86,17 +86,27 @@ public class NewBeeMallIndexConfigServiceImpl implements NewBeeMallIndexConfigSe
 
     @Override
     public List<NewBeeMallIndexConfigGoodsVO> getConfigGoodsesForIndex(int configType, int number) {
+        // 创建一个名为newBeeMallIndexConfigGoodsVOS的指定number大小的ArrayList
         List<NewBeeMallIndexConfigGoodsVO> newBeeMallIndexConfigGoodsVOS = new ArrayList<>(number);
+        // 根据configType和number查询符合要求的indexConfig
         List<IndexConfig> indexConfigs = indexConfigMapper.findIndexConfigsByTypeAndNum(configType, number);
         if (!CollectionUtils.isEmpty(indexConfigs)) {
             //取出所有的goodsId
+            /**
+             * 以indexConfigs创建一个顺序stream,
+             * map(IndexConfig::getGoodsId)执行所有IndexConfig的getGoodsId遍历出GoodsId，
+             * 然后collect(Collectors.toList())收集所有的GoodsId，放入List中
+             */
             List<Long> goodsIds = indexConfigs.stream().map(IndexConfig::getGoodsId).collect(Collectors.toList());
+            // 查询指定指定goodsIds的商品信息
             List<NewBeeMallGoods> newBeeMallGoods = goodsMapper.selectByPrimaryKeys(goodsIds);
+            // BeanUtil.copyList 拷贝newBeeMallGoods到NewBeeMallIndexConfigGoodsVO中，字段相同的拷贝，不相同忽略
             newBeeMallIndexConfigGoodsVOS = BeanUtil.copyList(newBeeMallGoods, NewBeeMallIndexConfigGoodsVO.class);
             for (NewBeeMallIndexConfigGoodsVO newBeeMallIndexConfigGoodsVO : newBeeMallIndexConfigGoodsVOS) {
-                String goodsName = newBeeMallIndexConfigGoodsVO.getGoodsName();
-                String goodsIntro = newBeeMallIndexConfigGoodsVO.getGoodsIntro();
+                String goodsName = newBeeMallIndexConfigGoodsVO.getGoodsName(); // 商品名
+                String goodsIntro = newBeeMallIndexConfigGoodsVO.getGoodsIntro(); // 商品简介
                 // 字符串过长导致文字超出的问题
+                // 字符超过30个用...代替
                 if (goodsName.length() > 30) {
                     goodsName = goodsName.substring(0, 30) + "...";
                     newBeeMallIndexConfigGoodsVO.setGoodsName(goodsName);

@@ -10,20 +10,23 @@ package ltd.newbee.mall.entity;
 
 import java.util.Date;
 
+/**
+ * 购物车表
+ */
 public class NewBeeMallShoppingCartItem {
-    private Long cartItemId;
+    private Long cartItemId;        // 购物项主键id
 
-    private Long userId;
+    private Long userId;            // 用户主键id
 
-    private Long goodsId;
+    private Long goodsId;           // 关联商品id
 
-    private Integer goodsCount;
+    private Integer goodsCount;     // 数量（最大为5）
 
-    private Byte isDeleted;
+    private Byte isDeleted;         // 删除标识字段（0-未删除 1-已删除）
 
-    private Date createTime;
+    private Date createTime;        // 创建时间
 
-    private Date updateTime;
+    private Date updateTime;        // 最近修改时间
 
     public Long getCartItemId() {
         return cartItemId;
