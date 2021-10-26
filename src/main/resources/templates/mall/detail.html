@@ -127,6 +127,7 @@
             data: JSON.stringify(data),
             success: function (result) {
                 if (result.resultCode == 200) {
+                    //使用SweetAlert对话框插件
                     swal({
                         title: "已将商品加入购物车",
                         icon: "success",
