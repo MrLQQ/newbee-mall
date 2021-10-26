@@ -13,31 +13,83 @@ package ltd.newbee.mall.common;
  */
 public class Constants {
     //public final static String FILE_UPLOAD_DIC = "/opt/image/upload/";//上传文件的默认url前缀，根据部署设置自行修改
-    public final static String FILE_UPLOAD_DIC = "D:\\upload\\";//上传文件的默认url前缀，根据部署设置自行修改
 
-    public final static int INDEX_CAROUSEL_NUMBER = 5;//首页轮播图数量(可根据自身需求修改)
+    /**
+     * 上传文件的默认url前缀，根据部署设置自行修改<br>
+     * 当前路径"D:\\upload\\"
+     */
+    public final static String FILE_UPLOAD_DIC = "D:\\upload\\";
 
-    public final static int INDEX_CATEGORY_NUMBER = 10;//首页一级分类的最大数量
+    /**
+     * 首页轮播图数量(可根据自身需求修改,当前为5)
+     */
+    public final static int INDEX_CAROUSEL_NUMBER = 5;
 
-    public final static int SEARCH_CATEGORY_NUMBER = 8;//搜索页一级分类的最大数量
+    /**
+     * 首页一级分类的最大数量(当前为10)
+     */
+    public final static int INDEX_CATEGORY_NUMBER = 10;
 
-    public final static int INDEX_GOODS_HOT_NUMBER = 4;//首页热卖商品数量
-    public final static int INDEX_GOODS_NEW_NUMBER = 5;//首页新品数量
-    public final static int INDEX_GOODS_RECOMMOND_NUMBER = 10;//首页推荐商品数量
+    /**
+     * 搜索页一级分类的最大数量(当前为8)
+     */
+    public final static int SEARCH_CATEGORY_NUMBER = 8;
 
-    public final static int SHOPPING_CART_ITEM_TOTAL_NUMBER = 13;//购物车中商品的最大数量(可根据自身需求修改)
+    /**
+     * 首页热卖商品数量(当前为4)
+     */
+    public final static int INDEX_GOODS_HOT_NUMBER = 4;
 
-    public final static int SHOPPING_CART_ITEM_LIMIT_NUMBER = 5;//购物车中单个商品的最大购买数量(可根据自身需求修改)
+    /**
+     * 首页新品数量(当前为5)
+     */
+    public final static int INDEX_GOODS_NEW_NUMBER = 5;
 
-    public final static String MALL_VERIFY_CODE_KEY = "mallVerifyCode";//验证码key
+    /**
+     * 首页推荐商品数量(当前为10)
+     */
+    public final static int INDEX_GOODS_RECOMMOND_NUMBER = 10;
 
-    public final static String MALL_USER_SESSION_KEY = "newBeeMallUser";//session中user的key
+    /**
+     * 购物车中商品的最大数量(可根据自身需求修改,当前为13)
+     */
+    public final static int SHOPPING_CART_ITEM_TOTAL_NUMBER = 13;
 
-    public final static int GOODS_SEARCH_PAGE_LIMIT = 10;//搜索分页的默认条数(每页10条)
+    /**
+     * 购物车中单个商品的最大购买数量(可根据自身需求修改,当前为5)
+     */
+    public final static int SHOPPING_CART_ITEM_LIMIT_NUMBER = 5;
 
-    public final static int ORDER_SEARCH_PAGE_LIMIT = 3;//我的订单列表分页的默认条数(每页3条)
+    /**
+     * 验证码key(当前为"mallVerifyCode")
+     */
+    public final static String MALL_VERIFY_CODE_KEY = "mallVerifyCode";
 
-    public final static int SELL_STATUS_UP = 0;//商品上架状态
-    public final static int SELL_STATUS_DOWN = 1;//商品下架状态
+    /**
+     * session中user的key(当前为"newBeeMallUser")
+     */
+    public final static String MALL_USER_SESSION_KEY = "newBeeMallUser";
+
+    /**
+     * 搜索分页的默认条数(当前每页10条)
+     */
+    public final static int GOODS_SEARCH_PAGE_LIMIT = 10;
+
+    /**
+     * 我的订单列表分页的默认条数(当前每页3条)
+     */
+    public final static int ORDER_SEARCH_PAGE_LIMIT = 3;
+
+    /**
+     * 商品上架状态<br>
+     * 当前为0
+     */
+    public final static int SELL_STATUS_UP = 0;
+
+    /**
+     * 商品下架状态<br>
+     * 当前为1
+     */
+    public final static int SELL_STATUS_DOWN = 1;
 
 }

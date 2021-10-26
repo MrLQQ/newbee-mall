@@ -76,11 +76,14 @@ public class GoodsController {
         if (goodsId < 1) {
             return "error/error_5xx";
         }
+        // 查找当前id的商品信息
         NewBeeMallGoods goods = newBeeMallGoodsService.getNewBeeMallGoodsById(goodsId);
         if (goods == null) {
+            // 如果没有查到，抛出一个GOODS_NOT_EXIST商品不存在的异常
             NewBeeMallException.fail(ServiceResultEnum.GOODS_NOT_EXIST.getResult());
         }
         if (Constants.SELL_STATUS_UP != goods.getGoodsSellStatus()) {
+            // 如果商品状态为下架，也抛出一个GOODS_PUT_DOWN商品已下架的异常
             NewBeeMallException.fail(ServiceResultEnum.GOODS_PUT_DOWN.getResult());
         }
         NewBeeMallGoodsDetailVO goodsDetailVO = new NewBeeMallGoodsDetailVO();

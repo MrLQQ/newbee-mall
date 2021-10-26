@@ -9,66 +9,148 @@
 package ltd.newbee.mall.common;
 
 /**
- * @author 13
- * @qq交流群 796794009
- * @email 2449207463@qq.com
- * @link https://github.com/newbee-ltd
+ * @author LQQ
  */
 public enum ServiceResultEnum {
+
+    /**
+     * error
+     */
     ERROR("error"),
 
+    /**
+     * success
+     */
     SUCCESS("success"),
 
+    /**
+     * 未查询到记录！
+     */
     DATA_NOT_EXIST("未查询到记录！"),
 
+    /**
+     * 已存在同级同名的分类！
+     */
     SAME_CATEGORY_EXIST("已存在同级同名的分类！"),
 
+    /**
+     * 用户名已存在！
+     */
     SAME_LOGIN_NAME_EXIST("用户名已存在！"),
 
+    /**
+     * 请输入登录名！
+     */
     LOGIN_NAME_NULL("请输入登录名！"),
 
+    /**
+     * 请输入密码！
+     */
     LOGIN_PASSWORD_NULL("请输入密码！"),
 
+    /**
+     * 请输入验证码！
+     */
     LOGIN_VERIFY_CODE_NULL("请输入验证码！"),
 
+    /**
+     * 验证码错误！
+     */
     LOGIN_VERIFY_CODE_ERROR("验证码错误！"),
 
+    /**
+     * 已存在相同的首页配置项！
+     */
     SAME_INDEX_CONFIG_EXIST("已存在相同的首页配置项！"),
 
+    /**
+     * 分类数据异常！
+     */
     GOODS_CATEGORY_ERROR("分类数据异常！"),
 
+    /**
+     * 已存在相同的商品信息！
+     */
     SAME_GOODS_EXIST("已存在相同的商品信息！"),
 
+    /**
+     * 商品不存在！
+     */
     GOODS_NOT_EXIST("商品不存在！"),
 
+    /**
+     * 商品已下架！
+     */
     GOODS_PUT_DOWN("商品已下架！"),
 
+    /**
+     * 超出单个商品的最大购买数量！
+     */
     SHOPPING_CART_ITEM_LIMIT_NUMBER_ERROR("超出单个商品的最大购买数量！"),
 
+    /**
+     * 超出购物车最大容量！
+     */
     SHOPPING_CART_ITEM_TOTAL_NUMBER_ERROR("超出购物车最大容量！"),
 
+    /**
+     * 登录失败！
+     */
     LOGIN_ERROR("登录失败！"),
 
+    /**
+     * 用户已被禁止登录！
+     */
     LOGIN_USER_LOCKED("用户已被禁止登录！"),
 
+    /**
+     * 订单不存在！
+     */
     ORDER_NOT_EXIST_ERROR("订单不存在！"),
 
+    /**
+     * 地址不能为空！
+     */
     NULL_ADDRESS_ERROR("地址不能为空！"),
 
+    /**
+     * 订单价格异常！
+     */
     ORDER_PRICE_ERROR("订单价格异常！"),
 
+    /**
+     * 生成订单异常！
+     */
     ORDER_GENERATE_ERROR("生成订单异常！"),
 
+    /**
+     * 购物车数据异常！
+     */
     SHOPPING_ITEM_ERROR("购物车数据异常！"),
 
+    /**
+     * 库存不足！
+     */
     SHOPPING_ITEM_COUNT_ERROR("库存不足！"),
 
+    /**
+     * 订单状态异常！
+     */
     ORDER_STATUS_ERROR("订单状态异常！"),
 
+    /**
+     * 操作失败！
+     */
     OPERATE_ERROR("操作失败！"),
 
+    /**
+     * 无权限！
+     */
     NO_PERMISSION_ERROR("无权限！"),
 
+    /**
+     * database error
+     */
     DB_ERROR("database error");
 
     private String result;

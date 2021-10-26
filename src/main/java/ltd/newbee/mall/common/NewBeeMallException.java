@@ -8,6 +8,10 @@
  */
 package ltd.newbee.mall.common;
 
+
+/**
+ * 自定义异常
+ */
 public class NewBeeMallException extends RuntimeException {
 
     public NewBeeMallException() {
