@@ -71,4 +71,16 @@ public class NewBeeMallUserVO implements Serializable {
     public void setShopCartItemCount(int shopCartItemCount) {
         this.shopCartItemCount = shopCartItemCount;
     }
+
+    @Override
+    public String toString() {
+        return "NewBeeMallUserVO{" +
+                "userId=" + userId +
+                ", nickName='" + nickName + '\'' +
+                ", loginName='" + loginName + '\'' +
+                ", introduceSign='" + introduceSign + '\'' +
+                ", address='" + address + '\'' +
+                ", shopCartItemCount=" + shopCartItemCount +
+                '}';
+    }
 }
