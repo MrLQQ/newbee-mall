@@ -10,7 +10,9 @@ package ltd.newbee.mall.dao;
 
 import ltd.newbee.mall.entity.AdminUser;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface AdminUserMapper {
     int insert(AdminUser record);
 

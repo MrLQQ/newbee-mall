@@ -11,9 +11,11 @@ package ltd.newbee.mall.dao;
 import ltd.newbee.mall.entity.MallUser;
 import ltd.newbee.mall.util.PageQueryUtil;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface MallUserMapper {
     int deleteByPrimaryKey(Long userId);
 

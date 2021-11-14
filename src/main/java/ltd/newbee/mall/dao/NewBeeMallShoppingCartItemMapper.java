@@ -10,9 +10,11 @@ package ltd.newbee.mall.dao;
 
 import ltd.newbee.mall.entity.NewBeeMallShoppingCartItem;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface NewBeeMallShoppingCartItemMapper {
     int deleteByPrimaryKey(Long cartItemId);
 
