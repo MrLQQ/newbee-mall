@@ -60,7 +60,7 @@ public class UploadController {
             }
             file.transferTo(destFile);
             Result resultSuccess = ResultGenerator.genSuccessResult();
-            resultSuccess.setData(NewBeeMallUtils.getHost(new URI(httpServletRequest.getRequestURL() + "")) + "/goods-img/" + newFileName);
+            resultSuccess.setData( "/goods-img/" + newFileName);
             return resultSuccess;
         } catch (IOException e) {
             e.printStackTrace();
@@ -111,7 +111,7 @@ public class UploadController {
                     }
                 }
                 multipartFiles.get(i).transferTo(destFile);
-                fileNames.add(NewBeeMallUtils.getHost(new URI(httpServletRequest.getRequestURL() + "")) + "/goods-img/" + newFileName);
+                fileNames.add( "/goods-img/" + newFileName);
             } catch (IOException e) {
                 e.printStackTrace();
                 return ResultGenerator.genFailResult("文件上传失败");
