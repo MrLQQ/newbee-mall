@@ -60,7 +60,7 @@ $(function () {
     }
 
     function coverImageFormatter(cellvalue) {
-        return "<img src='"+'/' + cellvalue + "' height=\"80\" width=\"80\" alt='商品主图'/>";
+        return "<img src='"+ cellvalue + "' height=\"80\" width=\"80\" alt='商品主图'/>";
     }
 
 });

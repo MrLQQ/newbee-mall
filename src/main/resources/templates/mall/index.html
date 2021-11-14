@@ -69,7 +69,7 @@
             <th:block th:each="hotGoodse : ${hotGoodses}">
                 <div class="hot-image">
                     <a th:href="@{'/goods/detail/'+${hotGoodse.goodsId}}">
-                        <img th:src="@{'/'+${hotGoodse.goodsCoverImg}}" th:alt="${hotGoodse.goodsName}">
+                        <img th:src="@{${hotGoodse.goodsCoverImg}}" th:alt="${hotGoodse.goodsName}">
                     </a>
                 </div>
             </th:block>
@@ -173,7 +173,7 @@
                             <div class="info discount" th:text="${recommendGoods.tag}">
                                 新品
                             </div>
-                            <img th:src="@{'/'+${recommendGoods.goodsCoverImg}}" th:alt="${recommendGoods.goodsName}">
+                            <img th:src="@{${recommendGoods.goodsCoverImg}}" th:alt="${recommendGoods.goodsName}">
                             <p class="name" th:text="${recommendGoods.goodsName}">NewBeeMall</p>
                             <p class="item_price" th:text="${recommendGoods.sellingPrice}">NewBeeMall</p>
                             <p class="counter">猜你喜欢</p>
